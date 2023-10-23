@@ -1,4 +1,9 @@
 [
+    {"text":"I'm not sure if I'll continue using this IT support service.","intent":"Churn"},
+    {"text":"I am so fed up with your service. I think I want to unsubscribe.","intent":"Churn"},
+    {"text":"I'm extremely frustrated with your service. I am looking into your competitors.","intent":"Churn"},
+    {"text":"I'm getting nowhere with you. I need a competent representative who can help.","intent":"Escalation"},
+    {"text":"I'm convinced you have no idea what you're talking about. Get me a supervisor.","intent":"Escalation"},
     {"text": "I'm having trouble with your service. Can you help me?", "intent": "Escalation"},
     {"text": "I'm considering canceling my subscription. What's the process?", "intent": "Churn"},
     {"text": "How do I update my billing information?", "intent": "No Intent Found"},
@@ -32,22 +37,6 @@
     {"text": "How do I track my order on your online store?", "intent": "No Intent Found"},
     {"text": "Is there a customer forum where I can ask questions about your products?", "intent": "No Intent Found"},
     {"text": "Tell me more about your return policy.", "intent": "No Intent Found"},
-    {"text": "I'd like to subscribe to your newsletter.", "intent": "No Intent Found"},
-    {"text": "I'm disappointed with your product. Put me in touch with someone in charge to resolve this.", "intent": "Churn and Escalation"},
-    {"text": "I'm seriously considering canceling my subscription. Connect me with a manager to discuss this matter.", "intent": "Churn and Escalation"},
-    {"text": "Your support is a disaster. I need a refund, and I want to talk to a senior representative.", "intent": "Churn and Escalation"},
-    {"text": "I'm at the end of my patience. I'm unsubscribing, and I need a supervisor's assistance.", "intent": "Churn and Escalation"},
-    {"text": "Your service is awful. I'm leaving, and I insist on speaking to a manager right now.", "intent": "Churn and Escalation"},
-    {"text": "I can't stand your company anymore. Cancel my subscription and transfer me to your management.", "intent": "Churn and Escalation"},
-    {"text": "I've had it with your service. I'm quitting, and I want to escalate this issue to your management team.", "intent": "Churn and Escalation"},
-    {"text": "This is the final straw. I'm ending my subscription, and I demand to speak to someone in charge.", "intent": "Churn and Escalation"},
-    {"text": "I've lost faith in your service. I'm discontinuing my subscription and need to connect with a manager.", "intent": "Churn and Escalation"},
-
-    {"text":"Your product isn't meeting my expectations, and your support isn't helping. I'm seriously considering canceling my subscription. I demand an immediate solution.","intent":"Churn and Escalation"},
-    {"text":"I can't tolerate this any longer. I'm canceling my subscription. Get me in touch with your escalation team to discuss my decision.","intent":"Churn and Escalation"},
-    {"text":"I've had too many issues, and your support isn't responsive. I'm thinking about leaving. I want to talk to a senior representative about this matter.","intent":"Churn and Escalation"},
-    {"text":"Your service is awful, and I'm leaving. I insist on speaking to a manager right now to discuss the terms of my departure.","intent":"Churn and Escalation"},
-    {"text":"Your product isn't meeting my expectations, and your support isn't helping. I'm seriously considering canceling my subscription. I demand an immediate solution.","intent":"Churn and Escalation"},
-    {"text":"I'm on the verge of leaving your company. I need to speak to a manager who can address my concerns or I'm canceling my account.","intent":"Churn and Escalation"}
+    {"text": "I'd like to subscribe to your newsletter.", "intent": "No Intent Found"}
     
 ]

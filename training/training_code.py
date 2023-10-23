@@ -6,12 +6,12 @@ from transformers import BertTokenizer, BertModel
 from sklearn.metrics import accuracy_score, classification_report
 from custom_classifier import SequenceClassifier
 
-# Define paths to the JSON data files
+
 train_data_path = '../data/train.json'
 validation_data_path = '../data/validation.json'
 test_data_path = '../data/test.json'
 
-# Load the training, validation, and test data from JSON files
+# Loading the training, validation, and test data from JSON files
 def load_data(data_path):
     with open(data_path, 'r') as json_file:
         data = json.load(json_file)
@@ -85,7 +85,7 @@ criterion = nn.CrossEntropyLoss()
 optimizer = torch.optim.Adam(custom_classifier.parameters(), lr=1e-3) 
 
 # Training custom classifier model
-for epoch in range(10):
+for epoch in range(20):
     custom_classifier.train()
     total_loss = 0.0
     for batch in train_loader:
