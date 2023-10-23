@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Classification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h1 {
+            font-size: 24px;
+        }
+        h2 {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+        form {
+            margin-top: 20px;
+        }
+        input[type="text-area"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            width: 300px;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #classification-result {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Enter the Text</h1>
+    <form id="query-form">
+        <input type="text-area" id="query-input" placeholder="Enter your query">
+        <button type="submit">Classify</button>
+    </form>
+
+    <h2>Classification Result</h2>
+    <p id="classification-result"></p>
+
+    <script>
+        const form = document.getElementById("query-form");
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const query = document.getElementById("query-input").value;
+
+            const response = await fetch("/intent/", {
+                method: "POST",
+                body: JSON.stringify({ query }),
+                headers: {
+                    "Content-Type": "application/json",
+                },
+            });
+
+            if (response.ok) {
+                const data = await response.json();
+                document.getElementById("classification-result").innerText = `Intent: ${data.intent}`;
+            } else {
+                document.getElementById("classification-result").innerText = "Error classifying the text.";
+            }
+        });
+    </script>
+</body>
+</html>
